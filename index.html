@@ -1,0 +1,101 @@
+<html>
+
+<head>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    
+#map {
+    height: 100%;
+  margin: 15px;}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+
+}
+h1 {
+  color: #21639e;
+  font-weight: bold;
+  font-size: 45px;
+  margin: 15px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-justify: inter-word;
+}
+h2 {
+  color: #e06666;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  text-justify: inter-word; 
+}
+h3 {
+  color: #6897bb;
+  font-size: 20px;
+  margin: 15px;
+  letter-spacing: 5px;
+  padding: 10px;
+  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.bg-image {
+  background-image: url("UmlingLa.jpg");
+  height: 95vh;
+  margin: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+html,  
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+</style>
+  
+<title>My Journey</title>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="./index.js"></script>
+
+</head>
+  
+<body>
+  <h1>Journey to the Highest road in the world</h1>
+  <h2>Umling La - 19,024 ft</h2>
+ 
+   <div class="bg-image"></div>  
+ 
+ 
+  <h3>I Started my solo journey from my hometown Surat and it got culminated at the highest motorable road
+       in the world after 8 days and 3000+ kms. </h3>
+       
+  <h3>Umling La, 19024 ft lies in the Ladakh Region of the 
+      Indian Himalayas and it is just 30 kms away from the border 
+      between India and Chinese occupied region of Tibet. </h3>
+       
+  <h3>In my quest to reach the top of the world on my belowed Motorcycle, I experienced probably e
+       verything from magnificent scenary to the gigantic mountains, the lack of Oxygen and Motorcycle 
+       breakdowns. But in the end everything was worth it when you reach there. </h3>
+     
+ 
+  <div id="map"></div>
+
+  
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
+      defer
+    >
+  </script>
+  </div>
+</body>
+
+</html>
