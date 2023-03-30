@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    
+#map {
+    height: 100%;
+  margin: 15px;}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+
+}
+h1 {
+  color: #21639e;
+  font-weight: bold;
+  font-size: 45px;
+  margin: 15px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-justify: inter-word;
+}
+h2 {
+  color: #e06666;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  text-justify: inter-word; 
+}
+h3 {
+  color: #6897bb;
+  font-size: 20px;
+  margin: 15px;
+  letter-spacing: 5px;
+  padding: 10px;
+  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.bg-image {
+  background-image: url("UmlingLa.jpg");
+  height: 95vh;
+  margin: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+html,  
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
