@@ -118,6 +118,7 @@ h3 {
   max-height: 346px;
 }
 .problem_image {
+  background-image: url("geom99-main/image_folder/statement.jpg");
   display: block;
   margin-left: auto;
   margin-right: auto;
