@@ -111,9 +111,11 @@ h3 {
 .image_background{
 padding-left: 10vw;
 padding-right: 10vw;
-display:flex
-
+display:flex;
+max-width: 50%;
+max-height: 50%;
 }
+
 .background_image {
   width: 80vw;
   height: 100%;
