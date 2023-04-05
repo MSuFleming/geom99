@@ -1,9 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-#map {
+/*#map {
     height: 100%;
-  margin: 15px;}
+  margin: 15px;}*/
 
   nav {
     margin: 25px auto 0;
@@ -99,7 +98,7 @@ h2 {
   text-justify: inter-word; 
 }
 h3 {
-  color: #6897bb;
+  color: #116fb8;
   font-size: 20px;
   margin: 15px;
   letter-spacing: 5px;
@@ -109,7 +108,7 @@ h3 {
   text-justify: inter-word;
 }
 
-.divbody{
+.image_background{
 padding-left: 10vw;
 padding-right: 10vw;
 display:flex
@@ -136,3 +135,40 @@ body {
     margin: 0;
     padding: 0;
   }
+
+
+@media(max-width:612px){
+    .box{
+        flex-grow: 0.7;
+    }
+}
+
+body {
+	margin: 0;
+}
+
+#map {
+height: 80%;
+width:80%;
+margin-top: 1vw;
+margin-bottom: 10px;
+margin-left: 10vw;
+margin-right: 10vw;
+}
+
+.column {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#ffffff;
+}
+.column2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:	#E0E0E0;
+}
+
+.column3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#f1f1f1;
+}
