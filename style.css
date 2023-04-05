@@ -112,14 +112,13 @@ h3 {
 padding-left: 10vw;
 padding-right: 10vw;
 display:flex;
-max-width: 50%;
-max-height: 50%;
 }
 
 .background_image {
   width: 80vw;
   height: 100%;
 }
+
 .problem_image {
   background-image: url("geom99-main/image_folder/statement.jpg");
   display: block;
