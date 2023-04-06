@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-/*#map {
-    height: 100%;
-  margin: 15px;}*/
-
   nav {
     margin: 25px auto 0;
     position: relative;
@@ -77,8 +73,8 @@
   
 body{
   font-family: 'Ubuntu', sans-serif;
-
 }
+
 h1 {
   color: #21639e;
   font-weight: bold;
@@ -108,17 +104,16 @@ h3 {
   text-justify: inter-word;
 }
 
-.image_background{
-padding-left: 10vw;
-padding-right: 10vw;
-display:flex;
-
-
+.image_background{ 
+margin-top: 1rem;
+padding-left: 30%;
 }
-.background_image {
-  width: 80vw;
-  height: 100%;
+
+.image_background img {
+  max-width: 60%;
+  height: auto;
 }
+
 .problem_image {
   background-image: url("geom99-main/image_folder/statement.jpg");
   display: block;
@@ -149,27 +144,30 @@ body {
 }
 
 #map {
-height: 80%;
-width:80%;
+height: 50%;
+width:90%;
 margin-top: 1vw;
-margin-bottom: 10px;
-margin-left: 10vw;
+margin-bottom: 5px;
+margin-left: 5vw;
 margin-right: 10vw;
 }
 
 .column {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color:#ffffff;
 }
 .column2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color:	#E0E0E0;
 }
 
-.column3 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color:#f1f1f1;
+.par {
+  width: 92vw;
+  margin: 5 auto;
+  background-color: #fff;
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 50px;
 }
