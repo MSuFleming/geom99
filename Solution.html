@@ -23,13 +23,11 @@
     <a href="Aboutus.html">About Us</a>
     <div class="animation start-home"></div>
   </nav>
-  </div>
-  
-<div class="column2">   
+
 <h2>Umling La - 19,024 ft</h2>
 </div>
 
-  <div class = "column">
+  <div class = "column2">
     <div class = "image_background">
       <img src="./image_folder/background_image1.jpg" alt="index background" width="540" height="346"> </div>
   </div>
@@ -38,6 +36,7 @@
     <div class ="par">
 <div id ="map"></div>
 <script>
+
 
 const apiKey = "AAPKe8787b68c10e47229374f402a0e61e364EQUp2dKX2yxOv4oAHpGPsRNpHYO2Kg8nKq-00Sz2BJo5MQLI555vz4WUFGpWkX4";
 const map = L.map("map").setView([39.44316847038047, -74.61306888037137], 10);
@@ -61,11 +60,7 @@ OSM: L.esri.Vector.vectorBasemapLayer("OSM:Standard", { apiKey: apiKey }),
 
 L.control.layers(basemapLayers, null, { collapsed: false }).addTo(map);
 
-L.esri.Vector.vectorBasemapLayer("OSM:StandardRelief", {
-  apikey: apiKey
-}).addTo(map);
-
-L.esri.featureLayer({
+var route = L.esri.featureLayer({
     url: 'https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Evacuation_Routes/FeatureServer/0'
 ,style: function (feature) {
             if (feature.properties.ROAD_CLASS === "STATE HIGHWAY") {
@@ -80,8 +75,23 @@ L.esri.featureLayer({
           }
         })
   .addTo(map);
+
+    const LehRoute = L.esri
+        .featureLayer({
+          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Leh_to_Khardung_la/FeatureServer/0"})
+        .addTo(map);
+
+        var greenIcon = L.icon({
+    iconUrl: 'https://starsunfolded.com/wp-content/uploads/2016/09/KIM-JONG-UN-ILL.jpg',
+
+    iconSize:     [42, 38], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+L.marker([39.44316847038047, -74.61306888037137], {icon: greenIcon}).addTo(map).bindPopup("<p>This is</p><b><img  class='pimage' src='https://starsunfolded.com/wp-content/uploads/2016/09/KIM-JONG-UN-ILL.jpg'><b/>"); 
 </script>
     </div>>
-    
+
 </body>
 </html>
