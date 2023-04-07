@@ -28,8 +28,7 @@
 </div>
 
   <div class = "column2">
-    <div class = "image_background">
-      <img src="./image_folder/background_image1.jpg" alt="index background" width="540" height="346"> </div>
+      <img src="./image_folder/background_image1.jpg" alt="index background" width="540" height="346">
   </div>
 
   <div class = "column2">
@@ -42,20 +41,13 @@ const apiKey = "AAPKe8787b68c10e47229374f402a0e61e364EQUp2dKX2yxOv4oAHpGPsRNpHYO
 const map = L.map("map").setView([39.44316847038047, -74.61306888037137], 10);
 
 const basemapLayers = {
-
 Streets: L.esri.Vector.vectorBasemapLayer("ArcGIS:Streets", { apiKey: apiKey }).addTo(map),
 Navigation: L.esri.Vector.vectorBasemapLayer("ArcGIS:Navigation", { apiKey: apiKey }),
 Topographic: L.esri.Vector.vectorBasemapLayer("ArcGIS:Topographic", { apiKey: apiKey }),
 "Light Gray": L.esri.Vector.vectorBasemapLayer("ArcGIS:LightGray", { apiKey: apiKey }),
-"Dark gray": L.esri.Vector.vectorBasemapLayer("ArcGIS:DarkGray", { apiKey: apiKey }),
-"Streets Relief": L.esri.Vector.vectorBasemapLayer("ArcGIS:StreetsRelief", { apiKey: apiKey }),
-Imagery: L.esri.Vector.vectorBasemapLayer("ArcGIS:Imagery", { apiKey: apiKey }),
-ChartedTerritory: L.esri.Vector.vectorBasemapLayer("ArcGIS:ChartedTerritory", { apiKey: apiKey }),
 ColoredPencil: L.esri.Vector.vectorBasemapLayer("ArcGIS:ColoredPencil", { apiKey: apiKey }),
-Nova: L.esri.Vector.vectorBasemapLayer("ArcGIS:Nova", { apiKey: apiKey }),
 Midcentury: L.esri.Vector.vectorBasemapLayer("ArcGIS:Midcentury", { apiKey: apiKey }),
 OSM: L.esri.Vector.vectorBasemapLayer("OSM:Standard", { apiKey: apiKey }),
-"OSM:Streets": L.esri.Vector.vectorBasemapLayer("OSM:Streets", { apiKey: apiKey })
 };
 
 L.control.layers(basemapLayers, null, { collapsed: false }).addTo(map);
