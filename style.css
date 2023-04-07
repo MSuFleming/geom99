@@ -103,16 +103,13 @@ h3 {
   text-align: justify;
   text-justify: inter-word;
 }
-
-.image_background{ 
-margin-top: 1rem;
-padding-left: 30%;
-}
-
-.image_background img {
-  max-width: 60%;
+img {
+  max-width: 100%;
   height: auto;
+  display: table;
+  margin: 0 auto;
 }
+
 
 .problem_image {
   background-image: url("geom99-main/image_folder/statement.jpg");
@@ -144,7 +141,7 @@ body {
 }
 
 #map {
-height: 50%;
+height: 70%;
 width:90%;
 margin-top: 1vw;
 margin-bottom: 5px;
@@ -174,4 +171,22 @@ margin-right: 10vw;
 
 .pimage{
 	max-width: 100%;
+}
+
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("image_folder/Photo1.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
