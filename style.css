@@ -306,16 +306,16 @@ transition:0.7s;
 }
 
 .footer-br{
-  margin-top:2rem;
-  padding-left: 10px;
+  margin-top:1.5rem;
+  padding-left: 3rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18;
+  font-size: 15;
 }
+
 .footer-br a {
   color:#021af7;
   text-decoration: none;
 }
-
 
 @media screen and (max-width:2560px) {
   .footer{
