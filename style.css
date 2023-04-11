@@ -97,7 +97,7 @@ h2 {
   text-align: center;
   text-justify: inter-word; 
 }
-h3 {
+.p_intro {
   color: #116fb8;
   font-size: 20px;
   margin: 15px;
@@ -341,3 +341,105 @@ transition:0.7s;
  .leaflet-popup-content {
   width: 200px;
 }
+
+h3 {
+  color: rgb(255, 177, 27);
+  font-weight: bold;
+  font-size: 50px;
+  margin: 15px;
+  letter-spacing: 4px;
+  text-align: Left;
+  text-justify: inter-word;
+}
+h5 {
+  color: rgb(255, 177, 27);
+  font-weight: bold;
+  font-size:300px;
+  margin: 15px;
+  letter-spacing: 8px;
+  text-align:left;
+  text-justify: inter-word;
+}
+
+.aboutus {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("image_folder/black.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about_par {
+  width: 70vw;
+  margin: 150 auto;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 50px;
+}
+/* https://stackoverflow.com/questions/55149756/how-can-i-center-an-image-on-top-of-a-hero-section
+*/.center img{
+  position: absolute;
+  top:40%; left: 80%;
+  max-width: 30%;
+  transform: translate(-50%, -85%)
+}
+
+/* https://codepen.io/konradwax/pen/woPNqJ */
+button {
+  border-radius: 25px;
+  background-color: #c94848;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px;
+  width: 180px;
+  transition: all 0.4s;
+  margin: 30px;
+  box-shadow: 0 12px 20px -8px rgba(255, 0, 0, 0.911);
+}
+
+button{
+  cursor:crosshair;
+  display: inline-block;
+  position: relative;
+  transition:0.7s;
+}
+
+button:after {
+  content: '→';
+  position: absolute;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 16px;
+}
+.container_m_text a {
+  color: #fcfcfc;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+.container_a_image {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  margin: 20px 30px 0 0;
+}
+
