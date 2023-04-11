@@ -373,12 +373,16 @@ h5 {
 }
 
 .about_par {
-  height: 35vh;
+  height: 40vh;
   margin: 5 auto;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 50px;
+}
+
+.about_par img{
+  max-height:200px;
 }
 /* https://codepen.io/konradwax/pen/woPNqJ */
 button {
