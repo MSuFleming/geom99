@@ -369,16 +369,11 @@ h5 {
   /* Flexbox stuff */
   display: flex;
   justify-content: center;
-  align-items: center;
   background-image: url("image_folder/black.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .about_par {
-  width: 90vw;
+  height: 35vh;
   margin: 5 auto;
   background-color: #fff;
   padding: 10px;
@@ -405,6 +400,7 @@ button{
   display: inline-block;
   position: relative;
   transition:0.7s;
+  margin-left: auto;
 }
 
 button:after {
@@ -424,7 +420,7 @@ button:hover:after {
   opacity: 1;
   right: 16px;
 }
-.container_m_text a {
+.container_a_text a {
   color: #fcfcfc;
   text-decoration: none;
   margin-bottom: 0.3rem;
@@ -432,6 +428,10 @@ button:hover:after {
 .container_a_image {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  height: 70%;
   margin: 20px 30px 0 0;
+}
+.container_a_text {
+  display: inline-block;
+  width: 46%;
 }
