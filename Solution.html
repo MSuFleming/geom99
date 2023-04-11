@@ -28,7 +28,7 @@
 </div>
 
   <div class = "column2">
-      <img src="./image_folder/background_image1.jpg" alt="index background" width="540" height="346">
+      <img src="image_folder\Solution_screen.png" alt="index background" width="857" height="686">
   </div>
 
   <div class = "column2">
@@ -38,60 +38,125 @@
 
 
 const apiKey = "AAPKe8787b68c10e47229374f402a0e61e364EQUp2dKX2yxOv4oAHpGPsRNpHYO2Kg8nKq-00Sz2BJo5MQLI555vz4WUFGpWkX4";
-const map = L.map("map").setView([34.18580899154968, 77.59620043624876], 10);
+const map = L.map("map").setView([34.21808159108533, 77.608244273519], 13);
 
 const basemapLayers = {
+
 Streets: L.esri.Vector.vectorBasemapLayer("ArcGIS:Streets", { apiKey: apiKey }).addTo(map),
 Navigation: L.esri.Vector.vectorBasemapLayer("ArcGIS:Navigation", { apiKey: apiKey }),
 Topographic: L.esri.Vector.vectorBasemapLayer("ArcGIS:Topographic", { apiKey: apiKey }),
-"Light Gray": L.esri.Vector.vectorBasemapLayer("ArcGIS:LightGray", { apiKey: apiKey }),
-ColoredPencil: L.esri.Vector.vectorBasemapLayer("ArcGIS:ColoredPencil", { apiKey: apiKey }),
-Midcentury: L.esri.Vector.vectorBasemapLayer("ArcGIS:Midcentury", { apiKey: apiKey }),
-OSM: L.esri.Vector.vectorBasemapLayer("OSM:Standard", { apiKey: apiKey }),
 };
 
 L.control.layers(basemapLayers, null, { collapsed: false }).addTo(map);
 
-var route = L.esri.featureLayer({
-    url: 'https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Evacuation_Routes/FeatureServer/0'
-,style: function (feature) {
-            if (feature.properties.ROAD_CLASS === "STATE HIGHWAY") {
-              return { color: "blue", weight: 2 };
-            } else if (feature.properties.ROAD_CLASS === "STREET") {
-              return { color: "red", weight: 2 };
-            } else if (feature.properties.ROAD_CLASS === "FEDERAL HIGHWAY") {
-              return { color: "Green", weight: 2 };
-            } else {
-              return { color: "white", weight: 2 };
-            }
-          }
-        })
-  .addTo(map);
-
     const LehRoute = L.esri
         .featureLayer({
-          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Leh_to_Khardung_la/FeatureServer/0"})
+          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Leh_to_Khardung_la/FeatureServer/0",style: (feature) => {return {color: "#F75C2F",weight: 1.5};}})
         .addTo(map);
 
         var mapIcon = L.icon({
     iconUrl: 'https://starsunfolded.com/wp-content/uploads/2016/09/KIM-JONG-UN-ILL.jpg',
+    
 
     iconSize:     [42, 38], // size of the icon
 
     iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
     popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
 });
-L.marker([39.44316847038047, -74.61306888037137], {icon: mapIcon}).addTo(map).bindPopup("<p>Leh City</p><b><img  class='pimage' src='https://starsunfolded.com/wp-content/uploads/2016/09/KIM-JONG-UN-ILL.jpg'><b/>"); 
-L.marker([34.152584741113486, 77.57686574526319], {icon: mapIcon}).addTo(map).bindPopup("<p>Leh City</p><b><img  class='pimage' src='./image_folder/pic1.JPG'><b/>"); 
-L.marker([34.17470731201442,  77.5776811368011], {icon: mapIcon}).addTo(map).bindPopup("<p>Shanti Stupa</p><b><img  class='pimage' src='./image_folder/pic2.jpg'><b/>"); 
-L.marker([34.16682481353113, 77.58532006805093], {icon: mapIcon}).addTo(map).bindPopup("<p>Leh Palace</p><b><img  class='pimage' src='./image_folder/pic3.JPG'><b/>"); 
-L.marker([34.21985770141139, 77.61475999410365], {icon: mapIcon}).addTo(map).bindPopup("<p>Leh Valley</p><b><img  class='pimage' src='./image_folder/pic4.JPG'><b/>"); 
-L.marker([34.223441918978075, 77.61961981162789], {icon: mapIcon}).addTo(map).bindPopup("<p>Diskit Monastery</p><b><img  class='pimage' src='./image_folder/pic5.JPG'><b/>"); 
-L.marker([34.20599057215327, 77.61557504044633], {icon: mapIcon}).addTo(map).bindPopup("<p>Somewhere on the way</p><b><img  class='pimage' src='./image_folder/pic6.JPG'><b/>"); 
-L.marker([34.261268847950234, 77.62664719922422], {icon: mapIcon}).addTo(map).bindPopup("<p>Nubra Valley</p><b><img  class='pimage' src='./image_folder/pic7.jpg'><b/>"); 
-L.marker([34.27868547129057, 77.60462870673537], {icon: mapIcon}).addTo(map).bindPopup("<p>Khardung La Top</p><b><img  class='pimage' src='./image_folder/pic8.jpg'><b/>"); 
+
+var cityIcon = L.icon({
+    iconUrl: 'image_folder/city.png',
+    
+
+    iconSize:     [30, 30], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+var mountIcon = L.icon({
+    iconUrl: 'image_folder/mountain.png',
+    
+
+    iconSize:     [30, 30], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+var palaceIcon = L.icon({
+    iconUrl: 'image_folder/palace.png',
+    
+
+    iconSize:     [30, 30], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+
+var roadIcon = L.icon({
+    iconUrl: 'image_folder/road-sign.png',
+    
+
+    iconSize:     [26, 26], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+
+var valleyIcon = L.icon({
+    iconUrl: 'image_folder/Valley.png',
+    
+
+    iconSize:     [30, 30], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+
+var monumentIcon = L.icon({
+    iconUrl: 'image_folder/monument-one.png',
+   
+    iconSize:     [30, 30], // size of the icon
+
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-1, -1] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([34.152584741113486, 77.57686574526319], {icon: cityIcon}).addTo(map).bindPopup("<p>Leh City</p><b><img  class='pimage' src='./image_folder/pic1.JPG'><b/>"); 
+L.marker([34.17470731201442,  77.5776811368011], {icon: palaceIcon}).addTo(map).bindPopup("<p>Shanti Stupa</p><b><img  class='pimage' src='./image_folder/pic2.jpg'><b/>"); 
+L.marker([34.16682481353113, 77.58532006805093], {icon: palaceIcon}).addTo(map).bindPopup("<p>Leh Palace</p><b><img  class='pimage' src='./image_folder/pic3.JPG'><b/>"); 
+L.marker([34.258898418046456, 77.6148591087595], {icon: roadIcon}).addTo(map).bindPopup("<p>Leh Valley</p><b><img  class='pimage' src='./image_folder/pic4.JPG'><b/>"); 
+L.marker([34.223441918978075, 77.61961981162789], {icon: valleyIcon}).addTo(map).bindPopup("<p>Diskit Monastery</p><b><img  class='pimage' src='./image_folder/pic5.JPG'><b/>"); 
+L.marker([34.20599057215327, 77.61557504044633], {icon: palaceIcon}).addTo(map).bindPopup("<p>Somewhere on the way</p><b><img  class='pimage' src='./image_folder/pic6.JPG'><b/>"); 
+L.marker([34.261268847950234, 77.62664719922422], {icon: valleyIcon}).addTo(map).bindPopup("<p>Nubra Valley</p><b><img  class='pimage' src='./image_folder/pic7.jpg'><b/>"); 
+L.marker([34.27868547129057, 77.60462870673537], {icon: monumentIcon}).addTo(map).bindPopup("<p>Khardung La Top</p><b><img  class='pimage' src='./image_folder/pic8.jpg'><b/>"); 
       </script>
     </div>>
-
+    <div class="footer-top">
+      <div class="footer-img"><img src="image_folder\Fleming-Logo-New.svg"
+        alt="background image"><img src="image_folder\FlemingGIS_Black.svg">
+      </div>
+      <div class="footer">
+        <div class="footer-heading footer-1">
+          <h4>Contact Me</h4>
+          <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BruBq5Nh4QfiiRM8t%2BejNuQ%3D%3D">Mingxuan Su</a>
+        </div>
+        <div class="footer-heading footer-2">
+          <h4>Credit</h4>
+          <a href="https://www.w3schools.com/">W3Schools</a>
+          <a href="https://leafletjs.com/">Leaflet</a>
+        </div>
+        <div class="footer-heading footer-3">
+          <h4>Fleming GIS Program</h4>
+          <a href="https://flemingcollege.ca/programs/geographic-information-systems-applications-specialist">Aplications Specialist</a>
+          <a href="https://flemingcollege.ca/programs/geographic-information-systems-cartographic-specialist">Cartographic Specialist</a>
+        </div>
+     
+      </div>
+      <div class="footer-br">
+        <p>Footer inspired by <a href="https://www.rovers.co.uk/">Blackburn Rovers F.C.</a></p>
+        <p>Map icons are derived from <a href="https://iconpark.oceanengine.com/official">Icon Park</a> (an open source website)</p>
+      </div>
+    </div>
 </body>
 </html>
+
