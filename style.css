@@ -355,7 +355,7 @@ h3 {
 h5 {
   color: rgb(255, 177, 27);
   font-weight: bold;
-  font-size:300px;
+  font-size:200px;
   margin: 15px;
   letter-spacing: 8px;
   text-align:left;
@@ -373,7 +373,7 @@ h5 {
 }
 
 .about_par {
-  height: 40vh;
+  height: 30vh;
   margin: 5 auto;
   background-color: #fff;
   padding: 10px;
