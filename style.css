@@ -255,6 +255,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp */
 .container_m_text {
   display: inline-block;
   width: 46%;
+  font-size: 20px;
 }
 @media (max-width: 620px) {
   .container_m_text {
@@ -356,6 +357,11 @@ h3 {
   overflow: hidden;
   text-justify: inter-word;
 }
+
+h4 {  color: rgb(209, 27, 255);
+  font-weight:bold;
+  font-size: 20px;
+}
 h5 {
   color: rgb(255, 177, 27);
   font-weight: bold;
@@ -395,7 +401,7 @@ h5 {
 }
 .about_par img{
   max-height:20vw;
-    overflow: hidden;
+  overflow: hidden;
 }
 /* https://codepen.io/konradwax/pen/woPNqJ */
 .button {
@@ -410,9 +416,7 @@ h5 {
   transition: all 0.4s;
   margin: 30px;
   box-shadow: 0 12px 20px -8px rgba(255, 0, 0, 0.911);
-}
 
-.button{
   cursor:crosshair;
   display: inline-block;
   position: relative;
@@ -425,7 +429,7 @@ h5 {
   position: absolute;
   top: 14px;
   right: -20px;
-  transition: 0.5s;
+  transition: 0.5s;  
 }
 
 .button:hover{
