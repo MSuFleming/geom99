@@ -425,7 +425,6 @@ h5 {
 }
 
 .button:after {
-  content: '→';
   position: absolute;
   top: 14px;
   right: -20px;
