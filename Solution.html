@@ -25,11 +25,11 @@
     <div class="animation start-home"></div>
   </nav>
 
-<h2>Umling La - 19,024 ft</h2>
+<h2>Leaflet Solution</h2>
 </div>
 
   <div class = "column2">
-      <img src="./image_folder/background_image1.jpg" alt="index background" width="540" height="346">
+      <img src="image_folder/Solution_screen.png" alt="index background" width="540" height="346">
   </div>
 
   <div class = "column2">
@@ -46,35 +46,9 @@ const basemapLayers = {
 Streets: L.esri.Vector.vectorBasemapLayer("ArcGIS:Streets", { apiKey: apiKey }).addTo(map),
 Navigation: L.esri.Vector.vectorBasemapLayer("ArcGIS:Navigation", { apiKey: apiKey }),
 Topographic: L.esri.Vector.vectorBasemapLayer("ArcGIS:Topographic", { apiKey: apiKey }),
-"Light Gray": L.esri.Vector.vectorBasemapLayer("ArcGIS:LightGray", { apiKey: apiKey }),
-"Dark gray": L.esri.Vector.vectorBasemapLayer("ArcGIS:DarkGray", { apiKey: apiKey }),
-"Streets Relief": L.esri.Vector.vectorBasemapLayer("ArcGIS:StreetsRelief", { apiKey: apiKey }),
-Imagery: L.esri.Vector.vectorBasemapLayer("ArcGIS:Imagery", { apiKey: apiKey }),
-ChartedTerritory: L.esri.Vector.vectorBasemapLayer("ArcGIS:ChartedTerritory", { apiKey: apiKey }),
-ColoredPencil: L.esri.Vector.vectorBasemapLayer("ArcGIS:ColoredPencil", { apiKey: apiKey }),
-Nova: L.esri.Vector.vectorBasemapLayer("ArcGIS:Nova", { apiKey: apiKey }),
-Midcentury: L.esri.Vector.vectorBasemapLayer("ArcGIS:Midcentury", { apiKey: apiKey }),
-OSM: L.esri.Vector.vectorBasemapLayer("OSM:Standard", { apiKey: apiKey }),
-"OSM:Streets": L.esri.Vector.vectorBasemapLayer("OSM:Streets", { apiKey: apiKey })
 };
 
 L.control.layers(basemapLayers, null, { collapsed: false }).addTo(map);
-
-var route = L.esri.featureLayer({
-    url: 'https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/Evacuation_Routes/FeatureServer/0'
-,style: function (feature) {
-            if (feature.properties.ROAD_CLASS === "STATE HIGHWAY") {
-              return { color: "blue", weight: 2 };
-            } else if (feature.properties.ROAD_CLASS === "STREET") {
-              return { color: "red", weight: 2 };
-            } else if (feature.properties.ROAD_CLASS === "FEDERAL HIGHWAY") {
-              return { color: "Green", weight: 2 };
-            } else {
-              return { color: "white", weight: 2 };
-            }
-          }
-        })
-  .addTo(map);
 
     const LehRoute = L.esri
         .featureLayer({
