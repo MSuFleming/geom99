@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>GEOM99</title>
 <link rel="stylesheet" href="style.css">
 </head>
-  
+
 <body>
   <div class="column">
   <h1>Methodology</h1>
@@ -25,7 +26,7 @@
 
     <div class ="par">
       <div class="container_m">
-        <img class="container_m_image" src="image_folder\background_image1.jpg">
+        <img class="container_m_image" src="image_folder/leaflet.png" alt="leaflet logo">
         <div class="container_m_text">
           <h4>Preface</h4>
           <p>None of us have used Leaflet before this semester, but we are still able to display our solution and show something to Shawn after a long struggle. We sincerely believe that you too can learn how to use Leaflet (even if you don't know anything like us) and create a solution website that is more exceptional than ours!</p>
@@ -36,19 +37,17 @@
     </div> 
 
     <div class="par">
-      <div class="container_m_text">
       <h4>Data Collection</h4>
       <p>The data was collected through multiple sources. the feautre layer for the route was created by Suruchi, 
         while Rajeev published the layer in ArcGIS Online to be used for the final map. The point coordinates 
         along the route was created by Meet from Google maps and all the Images used in the website were clicked by 
         Meet on his Trip to Ladakh in July 2022.         
        </p>
-      </div>
     </div>
 <!--     https://pavellaptev.medium.com/css-weekly-2-an-image-on-the-left-text-on-the-left-a5e59b2acdb5 -->
     <div class ="par">
       <div class="container_m">
-        <img class="container_m_image" src="image_folder\m1.png" alt="method picture 1">
+        <img class="container_m_image" src="image_folder/m1.png" alt="method picture 1">
         <div class="container_m_text">
           <h4>Display A Basemap</h4>
           <p>The first thing we did was to enable access to the core mapping functionality by going to the Leaflet site and copying the latest release code.</p>
@@ -59,7 +58,7 @@
 
     <div class ="par">
       <div class="container_m">
-        <img class="container_m_image" src="image_folder\m2.png" alt="method picture 2">
+        <img class="container_m_image" src="image_folder/m2.png" alt="method picture 2">
         <div class="container_m_text">
           <h4>Add Feature Layers (GeoJSON)</h4>
           <p>We next tried something a little more difficult, which is importing our layers. Since Leaflet supports various forms of importing feature layers such as csv, geojson, shapfile etc. We first try displaying a random polyline in geojson format. We notice that although this is a very simple line segment, the code appears redundant mainly because of the large amount of coordinate data.</p>
@@ -69,8 +68,8 @@
 
     <div class ="par">
       <div class="container_m">
-        <img class="container_m_image" src="image_folder\m3.png" alt="method picture 3">
-        <img class="container_m_image" src="image_folder\m4.png" alt="method picture 4">        
+        <img class="container_m_image" src="image_folder/m3.png" alt="method picture 3">
+        <img class="container_m_image" src="image_folder/m4.png" alt="method picture 4">        
         <div class="container_m_text">
           <h4>Add & Customize Feature Layers (AGOL Hosted Layers)</h4>
           <p>Then we decide to import our data from a hosted feature layer. Given that I had already published a feature layer in another class, I decided to import it. I first made sure that the layer was set to be visible to the public. I then direclty copy and paste the layer url (note it's the layer URL)</p>
@@ -81,18 +80,18 @@
 
 <div class ="par">
   <div class="container_m">
-    <img class="container_m_image" src="image_folder\background_image1.jpg">
+    <img class="container_m_image" src="image_folder/m5.png" alt="method pic 5">
     <div class="container_m_text">
       <h4>Add & Customize Pop-ups</h4>
-      <p>      
-       </p>
+      <p>To make our map more pleasing, we choose to use our iamges instead of the default icon. We first creat a icon class and give it a unique name, for example the icon in the screenshot is called monument, and we link it to the image we want to use from our images folder. When we display our markers to the map, we can tell the Leaflet to use this icon by using code: "{icon: [name of the icon]}".
+      </p>
     </div>
   </div>  
 </div>  
 </div>  
 <div class="footer-top">
-  <div class="footer-img"><img src="image_folder\Fleming-Logo-New.svg"
-    alt="background image"><img src="image_folder\FlemingGIS_Black.svg">
+  <div class="footer-img"><img src="image_folder/Fleming-Logo-New.svg"
+    alt="fleming logo"><img src="image_folder/FlemingGIS_Black.svg" alt="gis logo">
   </div>
   <div class="footer">
     <div class="footer-heading footer-1">
