@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -15,35 +16,65 @@
     <div class="animation start-home"></div>
   </nav>
 </div>
+
   <div class="column">  
-  <h2>Umling La - 19,024 ft</h2>
+  <h2>Leaflet Beginner Guide</h2>
   </div>
 
   <div class="column2">  
+
+    <div class ="par">
+      <div class="container_m">
+        <img class="container_m_image" src="image_folder\background_image1.jpg">
+        <div class="container_m_text">
+          <h4>Preface</h4>
+          <p>None of us have used Leaflet before this semester, but we are still able to display our solution and show something to Shawn after a long struggle. We sincerely believe that you too can learn how to use Leaflet (even if you don't know anything like us) and create a solution website that is more exceptional than ours!</p>
+          <p>Ming</p>
+          <p> 11 April, 2023</p>
+        </div>
+      </div>  
+    </div> 
+
     <div class="par">
+      <div class="container_m_text">
       <h4>Data Collection</h4>
       <p>The data was collected through multiple sources. the feautre layer for the route was created by Suruchi, 
         while Rajeev published the layer in ArcGIS Online to be used for the final map. The point coordinates 
         along the route was created by Meet from Google maps and all the Images used in the website were clicked by 
         Meet on his Trip to Ladakh in July 2022.         
        </p>
+      </div>
     </div>
 <!--     https://pavellaptev.medium.com/css-weekly-2-an-image-on-the-left-text-on-the-left-a5e59b2acdb5 -->
     <div class ="par">
       <div class="container_m">
-        <img class="container_m_image" src="image_folder\background_image1.jpg">
+        <img class="container_m_image" src="image_folder\m1.png" alt="method picture 1">
         <div class="container_m_text">
-          <h4>Add & Customize layers in Leaflet</h4>
-          <p>这本书，详详细细写尽自杀的方法。
-            这本书不是常自杀者的记录报告，也不是想说明有关自杀的理由。虽然可以将它当成是一本杂记书来阅读，不过整本书的走向是朝着「如何自杀」的方向进行。
-            啰啰嗦嗦的开场白，可能您已经厌烦了。
-            不知道从多久以前开始「为什么年轻人要走向死亡?」这个话题就不断反复再反复地被谈论着。那时，比方说七十年代，所得到的结论是「虚无主义」、「不欢年代」等等。然而，像是「为什么不可以自杀?」、「为什么一定要活着?」这类的问题，却始终没有任何解答。
-            言归正传，目前需要的是一本能让「自杀」付诸实现的书。
-            有关这样的书，十年前出版的「自杀的方法」，几乎也只是写些拉拉杂杂的内容，令人烦腻之至。现在应该知道的是，纯粹的自杀方法。
-            在美国，只有一部可以进行安乐死的自杀装置，是由一位学者发明创造的。(案例30)而本书将是日本唯一的一本「以语言文字为工具的自杀装置」。
-            谈到这里，很想马上从吃药自杀的方法介绍起，不过为了让「现在为什么要自杀?」这个问题更明白些，以及其它种种商业上的理由，不得不先写一些拉拉杂杂的东西。
-            Chernobyl          
-           </p>
+          <h4>Display A Basemap</h4>
+          <p>The first thing we did was to enable access to the core mapping functionality by going to the Leaflet site and copying the latest release code.</p>
+          <p>Next, we try to display a basemap.The code is shown on the left. We started by selecting and entering a coordinate on the map and setting a zoom level.The ArcGIS Developers website provides many examples of base layers, we copy all the example codes (just for fun) and we eventually selected three base layers that best suited our problem (streets, naviagtion and topographic).</p>
+        </div>
+      </div>  
+    </div> 
+
+    <div class ="par">
+      <div class="container_m">
+        <img class="container_m_image" src="image_folder\m2.png" alt="method picture 2">
+        <div class="container_m_text">
+          <h4>Add Feature Layers (GeoJSON)</h4>
+          <p>We next tried something a little more difficult, which is importing our layers. Since Leaflet supports various forms of importing feature layers such as csv, geojson, shapfile etc. We first try displaying a random polyline in geojson format. We notice that although this is a very simple line segment, the code appears redundant mainly because of the large amount of coordinate data.</p>
+        </div>
+      </div>  
+    </div> 
+
+    <div class ="par">
+      <div class="container_m">
+        <img class="container_m_image" src="image_folder\m3.png" alt="method picture 3">
+        <img class="container_m_image" src="image_folder\m4.png" alt="method picture 4">        
+        <div class="container_m_text">
+          <h4>Add & Customize Feature Layers (AGOL Hosted Layers)</h4>
+          <p>Then we decide to import our data from a hosted feature layer. Given that I had already published a feature layer in another class, I decided to import it. I first made sure that the layer was set to be visible to the public. I then direclty copy and paste the layer url (note it's the layer URL)</p>
+          <p>Next I notice that the symbology is not retained after the layers are imported into Leaflet. The ArcGIS Developers website provides really detailed examples of how to change the polygons or line symbols. I choose to assign colous to differnt type of roads based on attributes, (thickness can also be changed by modifying weight value here).</p>
         </div>
       </div>  
     </div> 
@@ -52,16 +83,8 @@
   <div class="container_m">
     <img class="container_m_image" src="image_folder\background_image1.jpg">
     <div class="container_m_text">
-      <h4>Embed Leaflet Map To HTML</h4>
-      <p>这本书，详详细细写尽自杀的方法。
-        这本书不是常自杀者的记录报告，也不是想说明有关自杀的理由。虽然可以将它当成是一本杂记书来阅读，不过整本书的走向是朝着「如何自杀」的方向进行。
-        啰啰嗦嗦的开场白，可能您已经厌烦了。
-        不知道从多久以前开始「为什么年轻人要走向死亡?」这个话题就不断反复再反复地被谈论着。那时，比方说七十年代，所得到的结论是「虚无主义」、「不欢年代」等等。然而，像是「为什么不可以自杀?」、「为什么一定要活着?」这类的问题，却始终没有任何解答。
-        言归正传，目前需要的是一本能让「自杀」付诸实现的书。
-        有关这样的书，十年前出版的「自杀的方法」，几乎也只是写些拉拉杂杂的内容，令人烦腻之至。现在应该知道的是，纯粹的自杀方法。
-        在美国，只有一部可以进行安乐死的自杀装置，是由一位学者发明创造的。(案例30)而本书将是日本唯一的一本「以语言文字为工具的自杀装置」。
-        谈到这里，很想马上从吃药自杀的方法介绍起，不过为了让「现在为什么要自杀?」这个问题更明白些，以及其它种种商业上的理由，不得不先写一些拉拉杂杂的东西。
-        Chernobyl          
+      <h4>Add & Customize Pop-ups</h4>
+      <p>      
        </p>
     </div>
   </div>  
@@ -86,7 +109,6 @@
       <a href="https://flemingcollege.ca/programs/geographic-information-systems-applications-specialist">Aplications Specialist</a>
       <a href="https://flemingcollege.ca/programs/geographic-information-systems-cartographic-specialist">Cartographic Specialist</a>
     </div>
- 
   </div>
   <div class="footer-br">
     <p>Map icons are derived from <a href="https://iconpark.oceanengine.com/official">Icon Park</a> (an open source website)</p>
