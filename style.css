@@ -144,11 +144,13 @@ body {
 }
 
 #map {
-height: 80%;
-width:90%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 margin-top: 1vw;
 margin-bottom: 5px;
-margin-left: 5vw;
+margin-left: 8vw;
 margin-right: 10vw;
 }
 
@@ -165,11 +167,12 @@ margin-right: 10vw;
 
 .par {
   width: 90vw;
-  margin: 5 auto;
+  margin: 0 auto;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 50px;
+  margin-left: auto;
 }
 
 .pimage{
@@ -310,7 +313,7 @@ transition:0.7s;
   margin-top:1.5rem;
   padding-left: 3rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15;
+  font-size: 12px;
 }
 
 .footer-br a {
@@ -350,6 +353,7 @@ h3 {
   margin: 15px;
   letter-spacing: 4px;
   text-align: Left;
+  overflow: hidden;
   text-justify: inter-word;
 }
 h5 {
@@ -360,6 +364,7 @@ h5 {
   letter-spacing: 8px;
   text-align:left;
   text-justify: inter-word;
+  overflow: hidden;
 }
 
 .aboutus {
@@ -370,22 +375,30 @@ h5 {
   display: flex;
   justify-content: center;
   background-image: url("image_folder/black.jpg");
+  overflow: hidden;
 }
 
 .about_par {
-  height: 30vh;
-  margin: 5 auto;
+  height: auto;
+  margin: 5px auto;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 50px;
+  overflow: hidden;
 }
-
+@media screen and (min-width:1020px) {
+  .about_par{
+    width:30vh;
+    padding-top: 1rem;
+  }
+}
 .about_par img{
-  max-height:200px;
+  max-height:20vw;
+    overflow: hidden;
 }
 /* https://codepen.io/konradwax/pen/woPNqJ */
-button {
+.button {
   border-radius: 25px;
   background-color: #c94848;
   border: none;
@@ -399,7 +412,7 @@ button {
   box-shadow: 0 12px 20px -8px rgba(255, 0, 0, 0.911);
 }
 
-button{
+.button{
   cursor:crosshair;
   display: inline-block;
   position: relative;
@@ -407,7 +420,7 @@ button{
   margin-left: auto;
 }
 
-button:after {
+.button:after {
   content: '→';
   position: absolute;
   top: 14px;
@@ -415,12 +428,12 @@ button:after {
   transition: 0.5s;
 }
 
-button:hover{
+.button:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
-button:hover:after {
+.button:hover:after {
   opacity: 1;
   right: 16px;
 }
